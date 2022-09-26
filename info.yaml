@@ -6,33 +6,32 @@
 #
 # This will be automatically collected and used to make a datasheet for the chip.
 project: 
-  author:       ""      # Your name
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     0       # Clock frequency in Hz (if required)
-  language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  wokwi_id:     0       # the wokwi ID
-  picture:      ""      # relative path to a picture in your repository
-  inputs:               # a description of what the inputs do
-    - clock
-    - reset
-    - none
-    - none
+  author:       "JinGen Lim"
+  title:        "BCD to Decimal Decoder"
+  description:  "Converts a BCD input into a decimal output"
+  how_it_works: "Accepts BCD through 4 input pins, and outputs the decimal equivalent (output pins 0 to 7). This is a functional clone of the DM7447, but does not include values 8 and 9 due to package constraints."
+  how_to_test:  "Write to the BCD input (IN0:0, IN1:2, IN2:4, IN3:8). One corresponding decimal output pin will be driven high."
+  external_hw:  "None"
+  doc_link:     "https://github.com/jglim/tinytapeout_bcd-dec/blob/main/README.md"
+  clock_hz:     0
+  language:     "wokwi"
+  wokwi_id:     341161378978988626
+  picture:      "ds.png"
+  inputs:
+    - input 1 (BCD 1)
+    - input 2 (BCD 2)
+    - input 3 (BCD 4)
+    - input 4 (BCD 8)
     - none
     - none
     - none
     - none
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
-
+    - decimal output 0
+    - decimal output 1
+    - decimal output 2
+    - decimal output 3
+    - decimal output 4
+    - decimal output 5
+    - decimal output 6
+    - decimal output 7
